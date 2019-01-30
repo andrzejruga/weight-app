@@ -4,7 +4,7 @@ const RecordDetails = (props) => {
     const id = props.match.params.id;
             
     return (
-        <div className="details">
+        <div className="details container">
             <div className="details__names">
                 <div className="details__name details__name--one">Monka</div>
                 <div className="details__blank">{id}</div>
@@ -20,7 +20,7 @@ const RecordDetails = (props) => {
                     <button className="btn btn--delete">Delete</button>
                 </div>
                 <div className="details__edit">
-                <button className="btn btn--edit">Edit</button>
+                    <button className="btn btn--edit">Edit</button>
                 </div>
             </div>
         </div>
