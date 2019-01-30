@@ -5,7 +5,7 @@ import Dashboard from './components/dashboard/Dashboard';
 import RecordDetails from './components/records/RecordDetails';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
-import NewRecord from './components/records/NewRecord';
+import History from './components/records/History';
 
 class App extends Component {
     render() {
@@ -18,7 +18,7 @@ class App extends Component {
                         <Route path='/record/:id' component={RecordDetails} />
                         <Route path='/signin' component={SignIn} />
                         <Route path='/signup' component={SignUp} />
-                        <Route path='/new' component={NewRecord} />
+                        <Route path='/history' component={History} />
                     </Switch>
                 </div>
             </BrowserRouter>

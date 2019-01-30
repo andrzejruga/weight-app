@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import LatestRecords from '../records/LatestRecords';
+import NewRecord from '../records/NewRecord';
 
 class Dashboard extends Component {
     render() {
@@ -7,6 +8,7 @@ class Dashboard extends Component {
             <div className="dashboard container">
                 <div className="form"></div>
                 <div className="latest">
+                    <NewRecord />
                     <LatestRecords />
                 </div>
             </div>
