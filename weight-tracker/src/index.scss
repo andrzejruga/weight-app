@@ -1,3 +1,16 @@
-@import './sass/base/base';
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&amp;subset=latin-ext');
+
+// 1. Config files and helpers
+@import './sass/abstracts/colors';
 @import './sass/abstracts/type';
+
+// 2. Base styles
+@import './sass/base/base';
+@import './sass/base/typography';
+
+// 3. Layout
 @import './sass/layout/navigation';
+
+// 4. Components
+@import './sass/components/buttons';
+@import './sass/components/inputs';

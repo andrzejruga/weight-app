@@ -1,5 +1,3 @@
-@import '../abstracts/type';
-
 //base styling
 
 * {
@@ -25,6 +23,7 @@ html {
 }
 
 body {
-    background-color: lightblue;
+    background-color: $color-accent;
     font-family: $font-main;
+    color: $color-secondary;
 }

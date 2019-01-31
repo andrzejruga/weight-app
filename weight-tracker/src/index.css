@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&amp;subset=latin-ext");
 * {
   margin: 0;
   padding: 0;
@@ -17,11 +18,13 @@ html {
 }
 
 body {
-  background-color: lightblue;
+  background-color: yellow;
   font-family: "Ubuntu", sans-serif;
+  color: green;
 }
 
 .nav {
-  background-color: grey;
+  background-color: green;
+  color: yellow;
 }
 /*# sourceMappingURL=index.css.map */
