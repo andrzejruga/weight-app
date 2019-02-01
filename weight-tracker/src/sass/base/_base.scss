@@ -23,7 +23,14 @@ html {
 }
 
 body {
-    background-color: $color-accent;
+    background-color: $color-main;
     font-family: $font-main;
-    color: $color-secondary;
+    font-size: 1.5rem;
+    color: $text-main;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }

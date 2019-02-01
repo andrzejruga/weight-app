@@ -5,11 +5,14 @@ import NewRecord from '../records/NewRecord';
 class Dashboard extends Component {
     render() {
         return (
-            <div className="dashboard container">
-                <div className="form"></div>
-                <div className="latest">
-                    <NewRecord />
-                    <LatestRecords />
+            <div className="dashboard">
+                <div className="dashboard__container container">
+                    <div className="dashboard__new">
+                        <NewRecord />
+                    </div>
+                    <div className="dashboard__latest">
+                        <LatestRecords />
+                    </div>
                 </div>
             </div>
         )

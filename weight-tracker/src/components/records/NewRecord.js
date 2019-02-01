@@ -17,8 +17,8 @@ class NewRecord extends Component {
     }
     render() {
         return (
-            <div className="container">
-                <form onSubmit={this.handleSubmit} className="form">
+            <div className="form">
+                <form onSubmit={this.handleSubmit} className="form__main">
                     <h4 className="form__title">Enter your weight</h4>
                     <div className="form__input-field">
                         <label htmlFor="oneWeight" className="form__input-label">Monka's Weight</label>

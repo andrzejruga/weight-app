@@ -6,10 +6,12 @@ import SignedOutLinks from './SignedOutLinks';
 const Navbar = () => {
     return (
         <nav className="nav">
-            <div className="nav__container">
+            <div className="nav__container container">
                 <Link to='/' className="nav__logo">Weight Tracker</Link>
-                <SignedInLinks />
-                <SignedOutLinks />
+                <div className="nav__main">
+                    <SignedInLinks />
+                    <SignedOutLinks />
+                </div>
             </div>
         </nav>
     )

@@ -1,4 +1,46 @@
 .nav {
-    background-color: $color-secondary;
-    color: $color-accent;
+    background-color: $color-dark;
+    color: $text-inverse;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1em 0 1em;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo,
+    &__link {
+        text-decoration: none;
+        color: $text-inverse;
+    }
+
+    &__logo {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    &__link {
+        font-size: 2rem;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    &__item {
+        margin-left: 3rem;
+    }
 }
