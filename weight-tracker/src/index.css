@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  background-color: #e2efe6;
+  background-color: #f2f2f2;
   font-family: "Ubuntu", sans-serif;
   font-size: 1.5rem;
   color: black;
@@ -30,13 +30,13 @@ body {
   margin: 0 auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 .75em;
+}
+
 .nav {
-  background-color: #1e5778;
+  background-color: #531e64;
   color: white;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   padding: 1em 0 1em;
 }
 
@@ -90,7 +90,22 @@ body {
   margin-left: 3rem;
 }
 
-.dashboard {
-  padding-top: 8em;
+.form__main {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.form__title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+}
+
+.form__input-field {
+  display: -ms-grid;
+  display: grid;
 }
 /*# sourceMappingURL=index.css.map */

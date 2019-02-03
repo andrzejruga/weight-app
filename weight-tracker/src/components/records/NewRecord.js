@@ -21,15 +21,16 @@ class NewRecord extends Component {
                 <form onSubmit={this.handleSubmit} className="form__main">
                     <h4 className="form__title">Enter your weight</h4>
                     <div className="form__input-field">
-                        <label htmlFor="oneWeight" className="form__input-label">Monka's Weight</label>
+                        <label htmlFor="oneWeight" className="form__input-label">Monka</label>
                         <input type="number" step="0.1" placeholder="00.0" id="oneWeight" onChange={this.handleChange} className="form__input"/>
+                        <span>kg</span>
                     </div>
                     <div className="form__input-field">
                         <label htmlFor="date" className="form__input-label">Date</label>
                         <input type="date" id="date" onChange={this.handleChange} className="form__input" required/>
                     </div>
                     <div className="form__input-field">
-                        <label htmlFor="twoWeight" className="form__input-label">Andy's Weight</label>
+                        <label htmlFor="twoWeight" className="form__input-label">Andy</label>
                         <input type="number" step="0.1" placeholder="00.0" id="twoWeight" onChange={this.handleChange} className="form__input"/>
                     </div>
                     <div className="form__input-field">
