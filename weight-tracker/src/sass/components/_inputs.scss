@@ -1,0 +1,23 @@
+.form {
+
+    &__input-field {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-gap: .7rem;
+    }
+
+    &__input-label {
+        grid-column: 1 / 3;
+    }
+
+    &__input {
+
+        &--number {
+            width: 7rem;
+        }
+
+        &--date {
+            width: 12rem;
+        }
+    }
+}

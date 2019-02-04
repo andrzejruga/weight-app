@@ -3,6 +3,7 @@
         display: grid;
         grid-gap: 20px;
         grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
     }
 
     &__title {
@@ -11,6 +12,10 @@
 
     &__input-field {
         display: grid;
-        
+
+        &:last-of-type {
+            grid-column: 2 / 3;
+        }
     }
+
 }
