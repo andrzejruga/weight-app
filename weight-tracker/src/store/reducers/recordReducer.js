@@ -7,6 +7,10 @@ const initState = {
 }
 
 const recordReducer = (state = initState, action) => {
+    switch (action.type) { // I could use as well if statement instead of switch
+        case 'ADD_RECORD':
+            console.log('added record', action.record)
+    }
     return state;
 }
 

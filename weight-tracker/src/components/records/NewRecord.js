@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addRecord } from '../../store/actions/recordActions';
 
 class NewRecord extends Component {
     state = {
@@ -13,7 +15,7 @@ class NewRecord extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        this.props.addRecord(this.state);
     }
     render() {
         return (
@@ -44,4 +46,10 @@ class NewRecord extends Component {
     }
 }
 
-export default NewRecord;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addRecord: (record) => dispatch(addRecord(record))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(NewRecord);
