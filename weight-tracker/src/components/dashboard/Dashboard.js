@@ -6,7 +6,7 @@ class Dashboard extends Component {
     render() {
         return (
             <div className="dashboard">
-                <div className="dashboard__container container">
+                <div className="dashboard__container container container--main">
                     <div className="dashboard__new">
                         <NewRecord />
                     </div>

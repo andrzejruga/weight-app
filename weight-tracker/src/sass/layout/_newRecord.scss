@@ -1,7 +1,7 @@
 .form {
     &__main {
         display: grid;
-        grid-gap: 20px;
+        grid-gap: 2rem;
         grid-template-columns: repeat(3, 1fr);
         justify-items: center;
     }

@@ -1,0 +1,8 @@
+.latest {
+    display: grid;
+    grid-gap: 2rem;
+
+    &__title {
+        justify-self: center;
+    }
+}

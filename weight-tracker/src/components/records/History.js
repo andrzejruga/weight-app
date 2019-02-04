@@ -3,18 +3,40 @@ import SingleRecord from './SingleRecord';
 
 const History = () => {
     return (
-        <div className="latest">
-            <h4 className="latest__title">Last 30 days results</h4>
-            <SingleRecord />
-            <SingleRecord />
-            <SingleRecord />
-            <SingleRecord />
-            <SingleRecord />
-            <SingleRecord />
-            <SingleRecord />
-            <SingleRecord />
-            <SingleRecord />
-            <SingleRecord />
+        <div className="history">
+            <div className="history__container container container--main">
+                <h4 className="history__title">Last 30 days results</h4>
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+                <SingleRecord />
+            </div>
         </div>
     )
 }

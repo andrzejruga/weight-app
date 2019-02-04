@@ -30,6 +30,10 @@ body {
   margin: 0 auto;
 }
 
+.container--main {
+  padding-top: 3rem;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 .75em;
 }
@@ -99,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 .form__main {
   display: -ms-grid;
   display: grid;
-  grid-gap: 20px;
+  grid-gap: 2rem;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   justify-items: center;
@@ -122,6 +126,37 @@ h1, h2, h3, h4, h5, h6 {
   grid-column: 2 / 3;
 }
 
+.single {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  justify-items: center;
+}
+
+.latest {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+}
+
+.latest__title {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.history__container {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.history__title {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
 .form__input-field {
   display: -ms-grid;
   display: grid;
@@ -141,6 +176,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form__input--date {
-  width: 12rem;
+  width: 14rem;
 }
 /*# sourceMappingURL=index.css.map */
