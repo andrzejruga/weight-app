@@ -1,11 +1,11 @@
 import React from 'react';
 
-const SingleRecord = () => {
+const SingleRecord = ({record}) => {
     return (
         <div className="single">
-            <div className="single__one">72,5</div>
-            <div className="single__date">30th Jan, 2019</div>
-            <div className="single__two">51,0</div>
+            <div className="single__one">{record.weightOne}</div>
+            <div className="single__date">{record.date}</div>
+            <div className="single__two">{record.weightTwo}</div>
         </div>
     )
 }
