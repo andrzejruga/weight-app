@@ -4,8 +4,8 @@ import { addRecord } from '../../store/actions/recordActions';
 
 class NewRecord extends Component {
     state = {
-        oneWeight: '',
-        twoWeight: '',
+        weightOne: '',
+        weightTwo: '',
         date: ''
     }
     handleChange = (e) => {
@@ -18,13 +18,13 @@ class NewRecord extends Component {
         this.props.addRecord(this.state);
     }
     render() {
-        return (
+        return ( 
             <div className="form">
                 <form onSubmit={this.handleSubmit} className="form__main">
                     <h4 className="form__title">Enter your weight</h4>
                     <div className="form__input-field">
-                        <label htmlFor="oneWeight" className="form__input-label">Monka</label>
-                        <input type="number" step="0.1" placeholder="00.0" id="oneWeight" onChange={this.handleChange} className="form__input form__input--number"/>
+                        <label htmlFor="weightOne" className="form__input-label">Monka</label>
+                        <input type="number" step="0.1" placeholder="00.0" id="weightOne" onChange={this.handleChange} className="form__input form__input--number"/>
                         <span>kg</span>
                     </div>
                     <div className="form__input-field">
@@ -32,8 +32,8 @@ class NewRecord extends Component {
                         <input type="date" id="date" onChange={this.handleChange} className="form__input form__input--date" required/>
                     </div>
                     <div className="form__input-field">
-                        <label htmlFor="twoWeight" className="form__input-label">Andy</label>
-                        <input type="number" step="0.1" placeholder="00.0" id="twoWeight" onChange={this.handleChange} className="form__input form__input--number"/>
+                        <label htmlFor="weightTwo" className="form__input-label">Andy</label>
+                        <input type="number" step="0.1" placeholder="00.0" id="weightTwo" onChange={this.handleChange} className="form__input form__input--number"/>
                         <span>kg</span>
                     </div>
                     <div className="form__input-field">
