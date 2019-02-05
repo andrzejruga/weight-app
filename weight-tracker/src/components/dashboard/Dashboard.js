@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import LatestRecords from '../records/LatestRecords';
 import NewRecord from '../records/NewRecord';
 import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
 class Dashboard extends Component {
     render() {
@@ -24,9 +26,15 @@ class Dashboard extends Component {
 }
 
 const mapStateToProps = (state) => {
+    console.log(state);
     return {
-        records: state.record.records
+        records: state.firestore.ordered.records
     }
 }
 
-export default connect(mapStateToProps)(Dashboard);
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([
+        { collection: 'records' } // this component will update our state everytime there's a change in our db
+    ])
+)(Dashboard);
