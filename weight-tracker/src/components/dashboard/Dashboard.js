@@ -4,11 +4,13 @@ import NewRecord from '../records/NewRecord';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
+import { Redirect } from 'react-router-dom';
 
 class Dashboard extends Component {
     render() {
         // console.log(this.props);
-        const { records } = this.props; // don't need to desctructure, also can use below this.props.records
+        const { records, auth } = this.props; // don't need to desctructure, also can use below this.props.records
+        if (!auth.uid) return <Redirect to='/signin' />
     
         return (
             <div className="dashboard">
@@ -28,7 +30,8 @@ class Dashboard extends Component {
 const mapStateToProps = (state) => {
     console.log(state);
     return {
-        records: state.firestore.ordered.records
+        records: state.firestore.ordered.records,
+        auth: state.firebase.auth
     }
 }
 

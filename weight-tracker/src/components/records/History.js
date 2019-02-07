@@ -4,8 +4,12 @@ import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 
-const History = ({records}) => {
+const History = (props) => {
+    const { records, auth } = props;
+    if (!auth.uid) return <Redirect to='/signin' />
+
     return (
         <div className="history">
             <div className="history__container container container--main">
@@ -25,7 +29,8 @@ const History = ({records}) => {
 const mapStateToProps = (state) => {
     console.log(state);
     return {
-        records: state.firestore.ordered.records
+        records: state.firestore.ordered.records,
+        auth: state.firebase.auth
     }
 }
 
