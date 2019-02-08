@@ -21,6 +21,10 @@ const RecordDetails = (props) => {
                     <div className="details__date">{record.date}</div>
                     <div className="details__record details__record--two">{record.weightTwo} kg</div>
                 </div>
+                <div className="details__misc">
+                    <div className="details__added-by">Added by {record.authorFirstName} {record.authorLastName}</div>
+                    <div className="details__added-date">Date added: {record.date}</div>
+                </div>
                 <div className="details__actions">
                     <div className="details__delete">
                         <button className="btn btn--delete">Delete</button>

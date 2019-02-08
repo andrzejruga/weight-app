@@ -2,11 +2,13 @@ export const addRecord = (record) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
         // make async call to database and then dispatch
         const firestore = getFirestore();
+        const profile = getState().firebase.profile;
+        const authorId = getState().firebase.auth.uid;
         firestore.collection('records').add({
             ...record, // properties from state from NewRecord
-            authorFirstName: 'Zo',
-            authorLastName: 'Nowak',
-            authorId: 12345,
+            authorFirstName: profile.firstName,
+            authorLastName: profile.lastName,
+            authorId: authorId,
             createdAt: new Date()
         }).then(() => {
             dispatch({ type: 'ADD_RECORD', record }); // record: record
