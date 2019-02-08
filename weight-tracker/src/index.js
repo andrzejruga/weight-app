@@ -15,9 +15,14 @@ const store = createStore(rootReducer,
     compose(
         applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
         reduxFirestore(fbConfig),
-        reactReduxFirebase(fbConfig, {attachAuthIsReady: true})
+        reactReduxFirebase(fbConfig, {useFirestoreForProfile: true, userProfile: 'users', attachAuthIsReady: true})
     )
 );
+
+// reactReduxFirebase is an enhancer
+
+// useFirestoreForProfile and userProfile are used by firebase reducer to sync firestore
+// with the profile object in the state
 
 // thanks to AuthIsReady the app doesn't show sign in links in navbar for a few seconds
 // untill it realizes we are logged in and it starts showing sign out links
