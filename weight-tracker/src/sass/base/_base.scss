@@ -14,19 +14,19 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1 rem = 10px, 10px/16p = 62.5%
-    // @media only screen and (max-width: $bp-medium) {
-    //     font-size: 55%;
-    // }
-    // @media only screen and (max-width: $bp-small) {
-    //     font-size: 40%;
-    // }
+    min-height: 100%;
 }
 
 body {
-    background-color: $color-main;
     font-family: $font-main;
     font-size: 1.5rem;
     color: $text-main;
+    background: url(/img/bg-04.svg);
+    background-color: white;
+    background-position: bottom;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 100%;
 }
 
 .container {
