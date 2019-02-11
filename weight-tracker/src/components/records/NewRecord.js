@@ -10,7 +10,10 @@ class NewRecord extends Component {
     }
     handleChange = (e) => {
         this.setState({
-            [e.target.id]: e.target.value
+            // [e.target.id]: e.target.value
+            [e.target.id]: (e.target.id === 'weightOne' || e.target.id === 'weightTwo') ?
+                parseFloat(e.target.value).toFixed(1) :
+                e.target.value
         })
     }
     handleSubmit = (e) => {
@@ -18,7 +21,7 @@ class NewRecord extends Component {
         this.props.addRecord(this.state);
     }
     render() {
-        return ( 
+        return (
             <div className="form">
                 <form onSubmit={this.handleSubmit} className="form__main">
                     <h4 className="form__title">Enter your weight</h4>
