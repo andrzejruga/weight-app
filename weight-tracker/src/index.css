@@ -133,12 +133,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .single {
+  text-decoration: none;
+  color: black;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1rem 0;
+  border-radius: 5px;
+}
+
+.single__box {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   justify-items: center;
+}
+
+.single__header {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1873b6;
 }
 
 .latest {

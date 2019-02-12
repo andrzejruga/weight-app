@@ -14,9 +14,14 @@ const History = (props) => {
         <div className="history">
             <div className="history__container container container--main">
                 <h4 className="history__title">Last 30 days results</h4>
+                <div className="single__box">
+                    <div className="single__header single__header--one">Monka</div>
+                    <div className="single__header single__header--date">Date</div>
+                    <div className="single__header single__header--two">Andy</div>
+                </div>
                 { records && records.map(record => {
                     return (
-                        <Link to={'/record/' + record.id} key={record.id}>
+                        <Link to={'/record/' + record.id} key={record.id} className="single">
                             <SingleRecord record={record} />
                         </Link>
                     )

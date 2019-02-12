@@ -1,6 +1,21 @@
 .single {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    justify-items: center;
+    text-decoration: none;
+    color: $text-main;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 1rem 0;
+    border-radius: 5px;
+
+    &__box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        justify-items: center;
+    }
+
+    &__header {
+        font-weight: 700;
+        font-size: 2rem;
+        color: $color-secondary;
+    }
+    
 }
