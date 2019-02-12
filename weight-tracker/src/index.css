@@ -177,6 +177,64 @@ h1, h2, h3, h4, h5, h6 {
       justify-self: center;
 }
 
+.details__box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  grid-gap: 2rem;
+}
+
+.details__title {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.details__data {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-columns: 1fr auto 1fr;
+      grid-template-columns: 1fr auto 1fr;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.details__name {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #1873b6;
+}
+
+.details__name--one {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+.details__name--two {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+}
+
+.details__record {
+  font-size: 2.5rem;
+}
+
+.details__date {
+  font-size: 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.details__misc {
+  text-align: right;
+  color: grey;
+}
+
 .form__input-field {
   display: -ms-grid;
   display: grid;
