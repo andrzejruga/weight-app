@@ -28,11 +28,11 @@ const RecordDetails = (props) => {
                             <div className="details__added-date">Date added: {moment(record.createdAt.toDate()).calendar()}</div>
                         </div>
                         <div className="details__actions">
-                            <div className="details__delete">
-                                <button className="btn btn--delete">Delete</button>
-                            </div>
                             <div className="details__edit">
                                 <button className="btn btn--edit">Edit</button>
+                            </div>
+                            <div className="details__delete">
+                                <button className="btn btn--delete">Delete</button>
                             </div>
                         </div>
                     </div>

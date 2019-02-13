@@ -1,9 +1,11 @@
 .form {
+    font-size: 2rem;
 
     &__input-field {
         display: grid;
         grid-template-columns: 1fr auto;
         grid-gap: .7rem;
+        align-items: center;
     }
 
     &__input-label {
@@ -11,13 +13,17 @@
     }
 
     &__input {
+        border: 1px solid $text-main;
+        border-radius: 5px;
+        font-size: 2rem;
+        padding: .25em;
 
         &--number {
-            width: 7rem;
+            width: 3.5em;
         }
 
         &--date {
-            width: 14rem;
+            width: 11em;
         }
     }
 }
