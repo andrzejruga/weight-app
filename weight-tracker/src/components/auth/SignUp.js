@@ -27,23 +27,23 @@ class SignUp extends Component {
             <div className="container container--main">
                 <form onSubmit={this.handleSubmit} className="form">
                     <h4 className="form__title">Sign Up</h4>
-                    <div className="form__input-field">
+                    <div className="form__input-field form__input-field--sign-in-up">
                         <label htmlFor="email" className="form__input-label">Email</label>
                         <input type="email" id="email" onChange={this.handleChange} className="form__input"/>
                     </div>
-                    <div className="form__input-field">
+                    <div className="form__input-field form__input-field--sign-in-up">
                         <label htmlFor="password" className="form__input-label">Password</label>
                         <input type="password" id="password" onChange={this.handleChange} className="form__input"/>
                     </div>
-                    <div className="form__input-field">
+                    <div className="form__input-field form__input-field--sign-in-up">
                         <label htmlFor="firstName" className="form__input-label">First Name</label>
                         <input type="text" id="firstName" onChange={this.handleChange} className="form__input"/>
                     </div>
-                    <div className="form__input-field">
+                    <div className="form__input-field form__input-field--sign-in-up">
                         <label htmlFor="lastName" className="form__input-label">Last Name</label>
                         <input type="text" id="lastName" onChange={this.handleChange} className="form__input"/>
                     </div>
-                    <div className="form__input-field">
+                    <div className="form__input-field form__input-field--sign-in-up">
                         <button className="btn btn--signup">Sign up</button>
                     </div>
                     <div className="form__error-field">

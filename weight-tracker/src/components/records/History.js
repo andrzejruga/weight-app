@@ -42,6 +42,6 @@ const mapStateToProps = (state) => {
 export default compose(
     connect(mapStateToProps),
     firestoreConnect([
-        { collection: 'records' } // this component will update our state everytime there's a change in our db
+        { collection: 'records', orderBy: ['date', 'desc'] } // this component will update our state everytime there's a change in our db
     ])
 )(History);

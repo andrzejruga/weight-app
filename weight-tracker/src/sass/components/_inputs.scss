@@ -6,6 +6,10 @@
         grid-template-columns: 1fr auto;
         grid-gap: .7rem;
         align-items: center;
+
+        &--sign-in-up {
+            margin-top: 2rem;
+        }
     }
 
     &__input-label {
