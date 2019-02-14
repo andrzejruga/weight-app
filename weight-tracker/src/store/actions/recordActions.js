@@ -18,8 +18,13 @@ export const addRecord = (record) => {
     }
 }
 
-// export const deleteRecord = (record) => {
-//     return (dispatch, getState, { getFirebase, getFirestore }) => {
-//         const firestore = getFirestore();
-//     }
-// }
+export const deleteRecord = (record) => {
+    return (dispatch, getState, { getFirebase, getFirestore }) => {
+        const firestore = getFirestore();
+        firestore.collection('records').doc(record.id).delete().then(() => {
+            dispatch({ type: 'DELETE_RECORD'});
+        }).catch((err) => {
+            dispatch({ type: 'DELETE_RECORD_ERROR', err });
+        });
+    }
+}

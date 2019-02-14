@@ -5,10 +5,13 @@ import { compose } from 'redux';
 import { Redirect } from 'react-router-dom';
 import moment from 'moment';
 import 'moment/locale/en-gb';
+import { deleteRecord } from '../../store/actions/recordActions';
 
 class RecordDetails extends Component {
-    state = {
-
+    handleDelete = (e) => {
+        e.preventDefault();
+        const id = this.props.match.params;
+        this.props.deleteRecord(id);
     }
     render() {
         const { record, auth } = this.props;
@@ -36,7 +39,7 @@ class RecordDetails extends Component {
                                     <button className="btn btn--edit">Edit</button>
                                 </div>
                                 <div className="details__delete">
-                                    <button className="btn btn--delete">Delete</button>
+                                    <button onClick={this.handleDelete} className="btn btn--delete">Delete</button>
                                 </div>
                             </div>
                         </div>
@@ -66,8 +69,14 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        deleteRecord: (id) => dispatch(deleteRecord(id))
+    }
+}
+
 export default compose(
-    connect(mapStateToProps),
+    connect(mapStateToProps, mapDispatchToProps),
     firestoreConnect([
         { collection: 'records' }
     ])
