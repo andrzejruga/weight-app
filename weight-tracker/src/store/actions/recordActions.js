@@ -17,3 +17,9 @@ export const addRecord = (record) => {
         });
     }
 }
+
+// export const deleteRecord = (record) => {
+//     return (dispatch, getState, { getFirebase, getFirestore }) => {
+//         const firestore = getFirestore();
+//     }
+// }
