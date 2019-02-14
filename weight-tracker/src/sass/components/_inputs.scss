@@ -20,6 +20,7 @@
         border: 1px solid $text-main;
         border-radius: 5px;
         font-size: 2rem;
+        font-family: $font-main;
         padding: .25em;
 
         &--number {
@@ -27,7 +28,7 @@
         }
 
         &--date {
-            width: 11em;
+            width: 9em;
         }
     }
 }

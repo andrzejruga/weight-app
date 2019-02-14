@@ -296,6 +296,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid black;
   border-radius: 5px;
   font-size: 2rem;
+  font-family: "Ubuntu", sans-serif;
   padding: .25em;
 }
 
@@ -304,6 +305,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form__input--date {
-  width: 11em;
+  width: 9em;
 }
 /*# sourceMappingURL=index.css.map */
