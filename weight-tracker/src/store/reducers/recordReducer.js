@@ -8,6 +8,12 @@ const recordReducer = (state = initState, action) => {
         case 'ADD_RECORD_ERROR':
             console.log('add record error', action.err);
             return state;
+        case 'DELETE_RECORD':
+            console.log('deleted record');
+            return state;
+        case 'DELETE_RECORD_ERROR':
+            console.log('delete record error', action.err);
+            return state;
         default:
             return state;
     }

@@ -32,7 +32,6 @@ const History = (props) => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
     return {
         records: state.firestore.ordered.records,
         auth: state.firebase.auth

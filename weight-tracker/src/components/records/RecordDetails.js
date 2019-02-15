@@ -17,6 +17,8 @@ class RecordDetails extends Component {
         const { record, auth } = this.props;
         if (!auth.uid) return <Redirect to='/signin' />
 
+        if (!record) return <Redirect to='/' />
+
         if (record) {
             return (
                 <div className="details">
@@ -59,13 +61,12 @@ class RecordDetails extends Component {
 
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state);
     const id = ownProps.match.params.id;
     const records = state.firestore.data.records;
     const record = records ? records[id] : null;
     return {
         record: record,
-        auth: state.firebase.auth
+        auth: state.firebase.auth,
     }
 }
 
