@@ -2,10 +2,18 @@
     font-size: 2rem;
 
     &__input-field {
+
+        &--weight {
         display: grid;
         grid-template-columns: 1fr auto;
         grid-gap: .7rem;
         align-items: center;
+        }
+
+        &--date {
+            display: grid;
+            grid-row-gap: .7rem;
+            }
 
         &--sign-in-up {
             margin-top: 2rem;
@@ -22,6 +30,7 @@
         font-size: 2rem;
         font-family: $font-main;
         padding: .25em;
+        height: 2.1em;
 
         &--number {
             width: 3.5em;

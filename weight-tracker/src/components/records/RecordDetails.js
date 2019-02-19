@@ -9,15 +9,15 @@ import { deleteRecord } from '../../store/actions/recordActions';
 
 class RecordDetails extends Component {
     handleDelete = (e) => {
-        e.preventDefault();
         const id = this.props.match.params;
         this.props.deleteRecord(id);
+        this.props.history.push('/');
     }
     render() {
         const { record, auth } = this.props;
         if (!auth.uid) return <Redirect to='/signin' />
 
-        if (!record) return <Redirect to='/' />
+        // if (!record) return <Redirect to='/' />  // don't need this anymore since I used history.push(path) in handleDelete - same effect, but more correct way I guess
 
         if (record) {
             return (

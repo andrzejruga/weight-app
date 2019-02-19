@@ -73,13 +73,25 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
+@media (max-width: 480px) {
+  .nav__logo {
+    font-size: 2rem;
+  }
+}
+
 .nav__link {
   font-size: 2rem;
 }
 
+@media (max-width: 480px) {
+  .nav__link {
+    font-size: 1.8rem;
+  }
+}
+
 .nav__link--initials {
   background: #84309f;
-  border: 1.5rem solid #84309f;
+  border: 0.75em solid #84309f;
   border-radius: 50%;
 }
 
@@ -101,10 +113,19 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav__item {
   margin-left: 3rem;
+}
+
+@media (max-width: 480px) {
+  .nav__item {
+    margin-left: 1.5rem;
+  }
 }
 
 .dashboard__container {
@@ -133,7 +154,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
 }
 
-.form__input-field:last-of-type {
+.form__input-field--button {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
@@ -271,7 +292,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2rem;
 }
 
-.form__input-field {
+.form__input-field--weight {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr auto;
@@ -280,6 +301,12 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.form__input-field--date {
+  display: -ms-grid;
+  display: grid;
+  grid-row-gap: .7rem;
 }
 
 .form__input-field--sign-in-up {
@@ -298,6 +325,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 2rem;
   font-family: "Ubuntu", sans-serif;
   padding: .25em;
+  height: 2.1em;
 }
 
 .form__input--number {

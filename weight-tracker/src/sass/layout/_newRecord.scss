@@ -13,7 +13,7 @@
     &__input-field {
         display: grid;
 
-        &:last-of-type {
+        &--button {
             grid-column: 2 / 3;
         }
     }

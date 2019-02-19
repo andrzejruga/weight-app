@@ -22,14 +22,20 @@
     &__logo {
         font-size: 3rem;
         font-weight: 700;
+        @media (max-width: 480px) {
+            font-size: 2rem;
+        }
     }
 
     &__link {
         font-size: 2rem;
+        @media (max-width: 480px) {
+            font-size: 1.8rem;
+        }
 
         &--initials {
             background: lighten($color-dark, 15%);
-            border: 1.5rem solid lighten($color-dark, 15%);
+            border: .75em solid lighten($color-dark, 15%);
             border-radius: 50%;
         }
     }
@@ -43,10 +49,13 @@
         list-style: none;
         display: flex;
         flex-direction: row;
-        
+        align-items: center;
     }
 
     &__item {
         margin-left: 3rem;
+        @media (max-width: 480px) {
+            margin-left: 1.5rem;
+        }
     }
 }
