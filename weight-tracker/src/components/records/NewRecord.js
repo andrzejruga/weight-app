@@ -20,6 +20,10 @@ class NewRecord extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         this.props.addRecord(this.state);
+        this.setState({
+            weightOne: '',
+            weightTwo: ''
+        })
     }
     render() {
         // let today = moment().format('YYYY-MM-D');
@@ -30,7 +34,7 @@ class NewRecord extends Component {
                     <h4 className="form__title">Enter your weight</h4>
                     <div className="form__input-field">
                         <label htmlFor="weightOne" className="form__input-label">Monka</label>
-                        <input type="number" step="0.1" placeholder="00.0" min="2" max="200" id="weightOne" onChange={this.handleChange} className="form__input form__input--number"/>
+                        <input type="number" step="0.1" placeholder="00.0" min="2" max="200" id="weightOne" onChange={this.handleChange} value={this.state.weightOne} className="form__input form__input--number"/>
                         <span>kg</span>
                     </div>
                     <div className="form__input-field">
@@ -39,7 +43,7 @@ class NewRecord extends Component {
                     </div>
                     <div className="form__input-field">
                         <label htmlFor="weightTwo" className="form__input-label">Andy</label>
-                        <input type="number" step="0.1" placeholder="00.0" min="2" max="200" id="weightTwo" onChange={this.handleChange} className="form__input form__input--number"/>
+                        <input type="number" step="0.1" placeholder="00.0" min="2" max="200" id="weightTwo" onChange={this.handleChange} value={this.state.weightTwo} className="form__input form__input--number"/>
                         <span>kg</span>
                     </div>
                     <div className="form__input-field">
