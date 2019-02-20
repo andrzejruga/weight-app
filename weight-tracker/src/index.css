@@ -203,16 +203,28 @@ h1, h2, h3, h4, h5, h6 {
 .single__box {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2rem;
   justify-items: center;
+}
+
+@media (max-width: 480px) {
+  .single__box {
+    -ms-grid-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 2fr 1fr;
+  }
 }
 
 .single__header {
   font-weight: 700;
   font-size: 2rem;
   color: #1873b6;
+}
+
+.single__date {
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 .latest {
@@ -224,6 +236,13 @@ h1, h2, h3, h4, h5, h6 {
 .latest__title {
   -ms-grid-column-align: center;
       justify-self: center;
+  font-size: 2rem;
+}
+
+@media (max-width: 480px) {
+  .latest__title {
+    font-size: 1.5rem;
+  }
 }
 
 .history__container {

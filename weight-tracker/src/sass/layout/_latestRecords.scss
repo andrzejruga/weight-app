@@ -4,5 +4,9 @@
 
     &__title {
         justify-self: center;
+        font-size: 2rem;
+        @media (max-width: 480px) {
+            font-size: 1.5rem;
+        }
     }
 }

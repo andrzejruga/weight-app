@@ -7,15 +7,22 @@
 
     &__box {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 2rem;
         justify-items: center;
+        @media (max-width: 480px) {
+            grid-template-columns: 1fr 2fr 1fr;
+        }
     }
 
     &__header {
         font-weight: 700;
         font-size: 2rem;
         color: $color-secondary;
+    }
+
+    &__date {
+        justify-self: center;
     }
     
 }
