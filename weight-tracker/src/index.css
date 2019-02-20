@@ -23,7 +23,7 @@ body {
   font-size: 1.5rem;
   color: black;
   background: url(/img/bg-04.svg);
-  background-color: white;
+  background-color: #fefbff;
   background-position: bottom;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -316,6 +316,10 @@ h4 {
   color: grey;
 }
 
+.details__actions {
+  text-align: center;
+}
+
 .btn {
   background: #b51c76;
   color: white;
@@ -339,6 +343,10 @@ h4 {
 .btn:active {
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
+}
+
+.btn--edit {
+  display: none;
 }
 
 .form {
