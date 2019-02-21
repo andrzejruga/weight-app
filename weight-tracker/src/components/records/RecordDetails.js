@@ -28,9 +28,9 @@ class RecordDetails extends Component {
                             <div className="details__data">
                                 <div className="details__name details__name--one">Monka</div>
                                 <div className="details__name details__name--two">Andy</div>
-                                <div className="details__record details__record--one">{record.weightOne} kg</div>
+                                <div className="details__record details__record--one">{parseFloat(record.weightOne).toFixed(1)} kg</div>
                                 <div className="details__date">{moment(record.date).format('dddd, D MMM YYYY')}</div>
-                                <div className="details__record details__record--two">{record.weightTwo} kg</div>
+                                <div className="details__record details__record--two">{parseFloat(record.weightTwo).toFixed(1)} kg</div>
                             </div>
                             <div className="details__misc">
                                 <div className="details__added-by">Added by {record.authorFirstName} {record.authorLastName}</div>

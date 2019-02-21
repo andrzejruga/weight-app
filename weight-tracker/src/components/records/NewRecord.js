@@ -13,7 +13,7 @@ class NewRecord extends Component {
         this.setState({
             // [e.target.id]: e.target.value
             [e.target.id]: (e.target.id === 'weightOne' || e.target.id === 'weightTwo') ?
-                parseFloat(e.target.value).toFixed(1) :
+                parseFloat(e.target.value) :
                 e.target.value
         })
     }
